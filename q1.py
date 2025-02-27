@@ -9,3 +9,10 @@ def gugu(a):
 print('구구단입니다.')
 b = input('숫자를 입력하세요')
 gugu(b)
+
+'''
+def gugu(n):
+    for i in range(1,10):
+        print(n*i)
+gugu(3)
+'''

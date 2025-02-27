@@ -19,3 +19,11 @@ def Search(a):
             print(tandf)
     print(sum(tandf))
 Search(input('숫자를 입력하세요:'))
+
+'''
+result=0
+for i in range(1,1000):
+    if i%3==0 or i %5==0:
+        result +=i
+print(result)
+'''
