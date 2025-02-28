@@ -1,18 +1,13 @@
-# 구구단 x단 프로그램 만들기
-# gugu 함수를 구현해보세요.
-def gugu(a):
-    a=int(a)
-    for i in range(1,10):
-        ai=a*i
-        print(f'{a}*{i}={ai}')
-
-print('구구단입니다.')
-b = input('숫자를 입력하세요')
-gugu(b)
-
 '''
-def gugu(n):
-    for i in range(1,10):
-        print(n*i)
-gugu(3)
+re 모듈을 불러오고, 실행 결과를 확인해보세요!
 '''
+
+
+import re
+text = "hello, elice!"
+
+p1 = "elice"                     # p1은 pattern 1의 의미입니다! 정규표현식을 입력해보세요. (ex. "e", "elice")
+
+m1 = re.findall(p1, text)   # text 문자열 변수에서 정규식 p1로 매칭한 결과를 나타냅니다.
+
+print(m1)

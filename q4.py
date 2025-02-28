@@ -1,29 +1,10 @@
-# 간단한 메모장 만들기
-# 원하는 메모를 파일에 저장하고
-# 추가 및 조회가 가능한 간단한 메모장을 만들어 보자.
-# python memo.py -a "Life is too short"
 
-# 내답
-#원하는 메모 파일에 저장
-'''
-with open('simple_memo.txt', 'w', encoding='utf-8') as f:
-    f.write(input('저장하고싶은 내용을 입력하세요'))
-'''
-#추가 기능?
-#조회기능?
+import re
 
-# 샘답
-import sys
-option = sys.argv[1]
+text = '''j<Q'T~K_5f_&VO_):Igq:=8t9qPGVB&-=9;oC7$7bw>I6)=abcQiZ&nNj2J\|0'aE*QyyelicebcW:y`y#Y&nY.gq.-0m\w2m8<1<`P:`OdE{>SF}]4_"8'Ozv:}Pc5@H91j250^H,W$~GD>;K[r_3VW?pS2U*uz`lxne`,ZMeliceFJDhMf$NxcQ[K_o4=Q2z?%[Ak1Do!E!8:>)7abcprcNIelice.mT<Cwy!~T/QfD0L&V&'\$z;7$@By&8L[8?0a4=v4uYY=IK#4{vB46delice$^EI}vD*ndR{F#EJyMHIe2QK,u"c^1d32Cvl%]Hq-;+(O/M8X-ykfelicedll3nfIn>%9i*e!9[u4$W3ASbY!h1elicedg{A|lrKJsSvJ<;A*9f_7K<?elice9MGo1Ngu~5w@EL!QMKaxUS]C6##~OBiduA]wa=pIse%E=PenU<&>w_sd{eaM0elicekr=%C^^@#j[~O!7K(^^LzS(mK"f3?p|C*;`~F|0uMCS1c=Sa-ya7?8j.!9r}YZxv'''
+          
 
-if option=='-a':
-    memo = sys.argv[2]
-    f=open('memo.txt', 'a')
-    f.write(memo)
-    f.write('\n')
-    f.close()
-elif option =='-v':
-    f=open('memo.txt')
-    memo=f.read()
-    print(memo)
-    f.close()
+p = "elice"  # 9행의 re.compile 함수에 들어갈 문자열 매개변수입니다.
+
+m = re.findall(p, text)
+print("결과 : ", m)

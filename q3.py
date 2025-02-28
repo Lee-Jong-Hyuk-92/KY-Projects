@@ -1,21 +1,10 @@
-# 게시판 페이징하기
-# 함수 이름은? get_total_page
-# 입력받는 값은? 게시물의 총 개수(m)
-# 한 페이지에 보여 줄 게시물 수(n)
-# 출력하는 값은? 총 페이지 수
 
-# 내답
-def get_total_page(m):
-    if m%10!=0:
-        page=m//10+1
-    else:
-        page=m//10
-    return page
+import re
 
-print(get_total_page(int(input('게시물이 총 몇개입니까?'))))
+text = '''&7q:>@6j`~itIghnfHH8=FW7y?<g"lt?=q3*kJdN/bsrF()Z<U$_w2-`KUnyxLB<8uMm%*`"[:%yha[f`bEXHW=qD9K>95K92cvI>Kj51/cy~cwaN[jB'u5<Ix8?;y~g15T_bb2z<uL&xOIaMJFk>s^}nz.sWx<2)R?:x5r9,T_45]zQ>Z|FN%AFf/#@^FR#&wogd@hlk(7&MZqqurTF+V5oy`cpM.iMUBMd#wGs9RTj7J`Q=,AIv3x%&/Q)-jDk'''
+          
 
-# 샘답
-def getTotalPage(m,n):
-    if m%n==0:
-        return m//n
-    return m//n+1
+p = "a"  # 9행의 re.compile 함수에 들어갈 문자열 매개변수입니다.
+
+m = re.findall(p, text)
+print("결과 : ", m)
